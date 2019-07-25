@@ -84,3 +84,21 @@ function include_angular_app( $dist_path )
 	}
 	echo "<link rel='stylesheet' href='{$dist_path}styles.css'>";
 }
+
+function include_angular_app_local( )
+{
+	$dist_path = "http://localhost:4200/";
+	echo " <base href='/'>";
+	echo " <app-root></app-root>";
+    $scripts = array(
+		'runtime.js',
+		'polyfills.js',
+		'main.js',
+		'vendor.js',
+		'styles.js'
+    );
+    foreach ($scripts as $script) {
+        echo "<script src='{$dist_path}/{$script}'></script>";
+	}
+	echo "<link rel='stylesheet' href='{$dist_path}styles.css'>";
+}

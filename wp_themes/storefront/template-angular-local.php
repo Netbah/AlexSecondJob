@@ -7,7 +7,7 @@
  * use the Homepage Control plugin.
  * https://wordpress.org/plugins/homepage-control/
  *
- * Template name: Angular
+ * Template name: Local
  *
  * @package storefront
  */
@@ -17,7 +17,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
                
-            <?php include_angular_app('/wp-content/themes/storefront/dist/'); ?>
+            <?php include_angular_app_local(); ?>
 
 			<?php
 			/**

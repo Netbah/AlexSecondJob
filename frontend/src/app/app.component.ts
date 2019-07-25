@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'wordpress';
+  addToCard() {
+    console.log('test card');
+    //http://localhost:8000/wp-json/wc/v2/cart
+  }
 }
