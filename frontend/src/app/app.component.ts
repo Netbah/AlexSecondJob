@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CardService } from './services/card.service';
+import { pipe } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +8,43 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  addToCard() {
-    console.log('test card');
-    //http://localhost:8000/wp-json/wc/v2/cart
+
+  constructor(private cardService: CardService) {
+
   }
+
+  getAllCardItems() {
+    this.cardService.getAllCardItems().subscribe(
+      pipe((res) => { 
+        console.log(res);
+      })
+    )
+  }
+
+  addCardItem(){
+    this.cardService.addItemToCard().subscribe(
+      pipe((res) => { 
+        console.log(res);
+      })
+    )
+  }
+
+  deleteCardItem(){
+    this.cardService.deleteItemFromCard().subscribe(
+      pipe((res) => { 
+        console.log(res);
+      })
+    )
+  }
+
+  updateCardItem(){
+    this.cardService.updateItemFromCard().subscribe(
+      pipe((res) => { 
+        console.log(res);
+      })
+    )
+  }
+
+
+
 }

@@ -16,6 +16,12 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
-<button (click)='addToCard()' type="button" label="Add to card" >Click</button>
+<button (click)='getAllCardItems()' type="button" label="Add to card" >Get all items</button>
+
+<button (click)='addCardItem()' type="button" label="Add to card" >Add card items</button>
+
+<button (click)='updateCardItem()' type="button" label="Add to card" >Update card items</button>
+
+<button (click)='deleteCardItem()' type="button" label="Add to card" >Delete card items</button>
 
 <router-outlet></router-outlet>
