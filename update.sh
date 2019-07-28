@@ -1,0 +1,1 @@
+docker cp wp_themes/storefront  woocommerce_wordpress_1:/var/www/html/wp-content/themes/
