@@ -69,7 +69,7 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 
 function include_angular_app( $dist_path )
 {
-	echo " <base href='/'>";
+	echo " <base href='/mixer'>";
 	echo " <app-root></app-root>";
     $scripts = array(
 		'runtime-es2015.js',
@@ -88,7 +88,7 @@ function include_angular_app( $dist_path )
 function include_angular_app_local( )
 {
 	$dist_path = "http://localhost:4200/";
-	echo " <base href='/'>";
+	echo " <base href='/local-dev'>";
 	echo " <app-root></app-root>";
     $scripts = array(
 		'runtime.js',
