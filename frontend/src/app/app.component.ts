@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CardService } from './services/card.service';
+import { CartService } from './services/Cart.service';
 import { pipe } from 'rxjs';
 
 @Component({
@@ -9,37 +9,37 @@ import { pipe } from 'rxjs';
 })
 export class AppComponent {
 
-  constructor(private cardService: CardService) {
+  constructor(private cartService: CartService) {
 
   }
 
-  getAllCardItems() {
-    this.cardService.getAllCardItems().subscribe(
-      pipe((res) => { 
+  getAllCartItems() {
+    this.cartService.getAllCartItems().subscribe(
+      pipe((res) => {
         console.log(res);
       })
     )
   }
 
-  addCardItem(){
-    this.cardService.addItemToCard().subscribe(
-      pipe((res) => { 
+  addCartItem() {
+    this.cartService.addItemToCart().subscribe(
+      pipe((res) => {
         console.log(res);
       })
     )
   }
 
-  deleteCardItem(){
-    this.cardService.deleteItemFromCard().subscribe(
-      pipe((res) => { 
+  deleteCartItem() {
+    this.cartService.deleteItemFromCart().subscribe(
+      pipe((res) => {
         console.log(res);
       })
     )
   }
 
-  updateCardItem(){
-    this.cardService.updateItemFromCard().subscribe(
-      pipe((res) => { 
+  updateCartItem() {
+    this.cartService.updateItemFromCart().subscribe(
+      pipe((res) => {
         console.log(res);
       })
     )

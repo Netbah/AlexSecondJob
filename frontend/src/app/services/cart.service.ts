@@ -5,33 +5,33 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class CardService {
+export class CartService {
 
-  private url: string = '/wp-json/wc/v2/cart'
+  private url: string = 'http://localhost/product'
 
   constructor(private http: HttpClient) { }
 
-  public getAllCardItems(): Observable<any> {
+  public getAllCartItems(): Observable<any> {
     return this.http.get<any>(this.url);
   }
 
-  public addItemToCard(){
+  public addItemToCart() {
     const item = {
       "product_id": 25,
       "quantity": 100
     }
-    return this.http.post<any>(`${this.url}/add`, item);
+    return this.http.post<any>(`${this.url}`, item);
   }
 
-  
-  public deleteItemFromCard(){
+
+  public deleteItemFromCart() {
     const item = {
       "cart_item_key": "8e296a067a37563370ded05f5a3bf3ec",
     }
     return this.http.post<any>(`${this.url}/cart-item`, item);
   }
 
-  public updateItemFromCard(){
+  public updateItemFromCart() {
     const item = {
       "cart_item_key": "8e296a067a37563370ded05f5a3bf3ec",
       "quantity": 200
