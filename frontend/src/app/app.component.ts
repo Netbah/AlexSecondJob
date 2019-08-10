@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { CartService } from './services/Cart.service';
 import { pipe } from 'rxjs';
+import { ProductService } from './services/product.service';
+import { CartService } from './services/cart.service';
 
 @Component({
   selector: 'app-root',
@@ -9,42 +10,21 @@ import { pipe } from 'rxjs';
 })
 export class AppComponent {
 
-  constructor(private cartService: CartService) {
+  constructor(private productService: ProductService, private cartService: CartService) {
 
   }
 
-  getAllCartItems() {
-    this.cartService.getAllCartItems().subscribe(
-      pipe((res) => {
-        console.log(res);
-      })
-    )
+  async createProduct() {
+    const croduct = {
+      "name": "Premium Quality",
+      "type": "simple",
+      "regular_price": "221.99",
+    }
+    const newProduct: any = await this.productService.create(croduct);
+    console.log(newProduct);
+
+    const result = await this.cartService.addItemToCart(newProduct.id);
+    console.log(result);
   }
-
-  addCartItem() {
-    this.cartService.addItemToCart().subscribe(
-      pipe((res) => {
-        console.log(res);
-      })
-    )
-  }
-
-  deleteCartItem() {
-    this.cartService.deleteItemFromCart().subscribe(
-      pipe((res) => {
-        console.log(res);
-      })
-    )
-  }
-
-  updateCartItem() {
-    this.cartService.updateItemFromCart().subscribe(
-      pipe((res) => {
-        console.log(res);
-      })
-    )
-  }
-
-
 
 }
