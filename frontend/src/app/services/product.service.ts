@@ -14,6 +14,6 @@ export class ProductService {
   }
 
   create(product) {
-    return this.http.post(this.url + 'api/product', product).toPromise();
+    return this.http.post(this.url + '/api/product', product).toPromise();
   }
 }

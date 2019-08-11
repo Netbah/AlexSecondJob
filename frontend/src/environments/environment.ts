@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   backendUrl: "http://localhost:3000/",
-  worldPressUrl: "http://localhost:8000/"
+  wordPressUrl: "http://localhost:8000/"
 };
 
 /*

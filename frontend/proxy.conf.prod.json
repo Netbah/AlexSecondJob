@@ -1,6 +1,6 @@
 {
   "/": {
-    "target": "https://wpbackend.azurewebsites.net",
+    "target": "167.71.32.21",
     "secure": true,
     "changeOrigin": true
   }

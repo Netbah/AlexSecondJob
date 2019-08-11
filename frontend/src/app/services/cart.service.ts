@@ -12,7 +12,7 @@ export class CartService {
   private url: string;
 
   constructor(private http: HttpClient) {
-    this.url = environment.worldPressUrl;
+    this.url = environment.wordPressUrl;
   }
 
   public getAllCartItems(): Observable<any> {

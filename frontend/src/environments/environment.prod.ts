@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  backendUrl: "https://wpbackend.azurewebsites.net/",
-  worldPressUrl: "https://mixersandbox.azurewebsites.net/"
+  backendUrl: "http://167.71.32.21",
+  wordPressUrl: "https://mixersandbox.azurewebsites.net/"
 };
