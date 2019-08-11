@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -32,7 +32,14 @@ export class CartService {
     const item = {
       "cart_item_key": cartItemKey,
     }
-    return this.http.post<any>(`${this.coCart}/cart-item`, item);
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      }),
+      body: item
+    };
+
+    return this.http.delete(`${this.coCart}/cart-item`, httpOptions).toPromise();
   }
 
   public updateItemFromCart(cartItemKey: string) {
