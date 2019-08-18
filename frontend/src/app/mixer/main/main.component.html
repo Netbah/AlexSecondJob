@@ -1,20 +1,25 @@
 <div class="container">
 
   <div class="mav-menu">
-
+    <div class="menu">
+      <div *ngFor="let category of categories">
+        <button [ngx-scroll-to]="category.id">{{category.label}}</button>
+      </div>
+    </div>
   </div>
 
   <div class="catalog">
-
-    <div *ngFor="let category of categories">
-      <div>
-        <div class="category-container">
-          <h2>{{category.label}}</h2>
-          <p class="category-text">{{category.description}}</p>
+    <div class="ingredients-list">
+      <div *ngFor="let category of categories">
+        <div id="{{category.id}}" #destinationRef>
+          <div class="category-container">
+            <h2>{{category.label}}</h2>
+            <p class="category-text">{{category.description}}</p>
+          </div>
         </div>
-      </div>
-      <div *ngFor="let ingredient of ingredients">
-        <app-ingredient [item]="ingredient"></app-ingredient>
+        <div *ngFor="let ingredient of ingredients">
+          <app-ingredient [item]="ingredient"></app-ingredient>
+        </div>
       </div>
     </div>
 

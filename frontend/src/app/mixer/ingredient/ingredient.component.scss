@@ -5,6 +5,10 @@
   border-top: solid 1px #d2d2d7;
   cursor: pointer;
 
+  :hover {
+    background: #f5f5f6;
+  }
+
   .ingredient-item {
     padding: 15px 15px 40px;
     display: flex;
