@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+
+  .mav-menu {
+    width: 200px;
+  }
+
+
+  .catalog {
+    width: 700px;
+
+    .category-container {
+      .category-text {
+        padding: 15px 15px;
+        font-size: 12px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .preview {
+    width: 300px;
+
+    .bg {
+      background-image: url("../../../assets/images/flacon.png");
+      height: 600px;
+      width: 450px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: fixed;
+      top: 100px;
+    }
+  }
+}
