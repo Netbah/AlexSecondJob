@@ -1,0 +1,55 @@
+.mixer-ingredient {
+  position: relative;
+  visibility: visible;
+  overflow: hidden;
+  border-top: solid 1px #d2d2d7;
+  cursor: pointer;
+
+  .ingredient-item {
+    padding: 15px 15px 40px;
+    display: flex;
+    justify-content: space-between;
+
+    .info-container {
+      .title {
+        font-weight: 600;
+        text-transform: none;
+        font-size: 18px;
+        line-height: 18px;
+      }
+
+      .extra-information {
+        margin-bottom: 0px;
+        display: inline-block;
+        padding: 3px 6px;
+        border-radius: 12px;
+        font-size: 12px;
+        line-height: 12px;
+        background-color: #f5f5f6;
+        color: #50505A;
+      }
+    }
+
+    .image-container {
+      width: 100px;
+      text-align: left;
+
+
+      .image-circle {
+        border-radius: 50%;
+        text-align: center;
+        display: inline-block;
+        border: solid 2px white;
+        margin: 10px 0px -10px;
+        height: 100px;
+        width: 100px;
+        background-color: #f5f5f6;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+}
