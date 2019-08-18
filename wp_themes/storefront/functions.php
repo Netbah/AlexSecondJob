@@ -67,6 +67,11 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 	}
 }
 
+function add_cors_http_header(){
+    header("Access-Control-Allow-Origin:*");
+}
+add_action('init','add_cors_http_header');
+
 function include_angular_app( $dist_path )
 {
 	echo " <base href='/mixer'>";

@@ -3,9 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  backendUrl: "http://localhost:3000/",
-  wordPressUrl: "http://localhost:8000/"
+  production: true,
+  backendUrl: "http://167.71.32.21",
+  wordPressUrl: "https://mixersandbox.azurewebsites.net"
 };
 
 /*
