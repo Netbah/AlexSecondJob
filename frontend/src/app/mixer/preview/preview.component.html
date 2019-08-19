@@ -1,0 +1,8 @@
+<div class="preview">
+  <div class="ingredient" *ngFor="let item of ingredients">
+    <span>{{item.title}}</span>
+    <span (click)="delete(item)">
+      <i class="material-icons">delete</i>
+    </span>
+  </div>
+</div>

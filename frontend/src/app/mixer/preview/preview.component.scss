@@ -1,0 +1,14 @@
+.preview {
+  color: black;
+
+  .ingredient {
+    padding: 2px;
+  }
+
+  i {
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+    color: dimgray;
+  }
+}
