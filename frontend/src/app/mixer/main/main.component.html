@@ -17,7 +17,7 @@
             <p class="category-text">{{category.description}}</p>
           </div>
         </div>
-        <div *ngFor="let ingredient of ingredients">
+        <div *ngFor="let ingredient of category.ingredients">
           <app-ingredient [item]="ingredient"></app-ingredient>
         </div>
       </div>

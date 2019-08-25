@@ -40,3 +40,8 @@ get_header(); ?>
 	</div><!-- #primary -->
 <?php
 get_footer();?>
+
+<script language='javascript'>
+	document.getElementById("colophon").style.display = "none";
+	document.getElementsByClassName("storefront-breadcrumb")[0].style.display = "none";
+</script>

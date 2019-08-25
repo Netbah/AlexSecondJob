@@ -13,35 +13,17 @@ export class MainComponent implements OnInit {
   ngOnInit() {
   }
 
-  categories = [
+  basis: IIngredient[] = [
     {
       id: 1,
-      label: "Category 1",
-      description: 'Lorem ipsum dolor sit amet, mei singulis atomorum cu, ut nihil ignota pertinax cum, viris fuisset urbanitas mei ex. Has saepe utamur reprimique et. Illud viderer et cum. Eu mazim numquam voluptatibus mei. Est nonumy volutpat et, usu enim periculis no, in esse meliore suscipiantur vel.'
-    },
-    {
-      id: 2,
-      label: "Category 2",
-      description: 'Lorem ipsum dolor sit amet, mei singulis atomorum cu, ut nihil ignota pertinax cum, viris fuisset urbanitas mei ex. Has saepe utamur reprimique et. Illud viderer et cum. Eu mazim numquam voluptatibus mei. Est nonumy volutpat et, usu enim periculis no, in esse meliore suscipiantur vel.'
-    },
-    {
-      id: 3,
-      label: "Category 3",
-      description: 'Lorem ipsum dolor sit amet, mei singulis atomorum cu, ut nihil ignota pertinax cum, viris fuisset urbanitas mei ex. Has saepe utamur reprimique et. Illud viderer et cum. Eu mazim numquam voluptatibus mei. Est nonumy volutpat et, usu enim periculis no, in esse meliore suscipiantur vel.'
-    }
-  ]
-
-  ingredients: IIngredient[] = [
-    {
-      id: 1,
-      title: 'Schoko moko',
+      title: 'Basis 1',
       description: 'Most valuable component ever',
       price: 15.99,
       image: '../../../assets/images/rose.png'
     },
     {
       id: 2,
-      title: 'Schoko moko 12312',
+      title: 'Basis 2',
       description: 'Most valuable component ever',
       price: 15.99,
       image: '../../../assets/images/rose.png'
@@ -49,21 +31,62 @@ export class MainComponent implements OnInit {
     },
     {
       id: 3,
-      title: 'Schoko moko 123 13123 123',
+      title: 'Basis 3',
       description: 'Most valuable component ever',
       price: 15.99,
       image: '../../../assets/images/rose.png'
     },
     {
       id: 4,
-      title: 'Schoko moko',
+      title: 'Basis 4',
       description: 'Most valuable component ever',
       price: 15.99,
       image: '../../../assets/images/rose.png'
     },
     {
       id: 5,
-      title: 'Schoko moko 12312',
+      title: 'Basis 5',
+      description: 'Most valuable component ever',
+      price: 15.99,
+      image: '../../../assets/images/rose.png'
+
+    },
+  ]
+
+
+  dufte: IIngredient[] = [
+    {
+      id: 1,
+      title: 'Duft 1',
+      description: 'Most valuable component ever',
+      price: 15.99,
+      image: '../../../assets/images/rose.png'
+    },
+    {
+      id: 2,
+      title: 'Duft 2',
+      description: 'Most valuable component ever',
+      price: 15.99,
+      image: '../../../assets/images/rose.png'
+
+    },
+    {
+      id: 3,
+      title: 'Duft 3',
+      description: 'Most valuable component ever',
+      price: 15.99,
+      image: '../../../assets/images/rose.png'
+    },
+    {
+      id: 4,
+      title: 'Duft 4',
+      description: 'Most valuable component ever',
+      price: 15.99,
+      image: '../../../assets/images/rose.png'
+    },
+    {
+      id: 5,
+      title: 'Duft 5',
       description: 'Most valuable component ever',
       price: 15.99,
       image: '../../../assets/images/rose.png'
@@ -71,11 +94,81 @@ export class MainComponent implements OnInit {
     },
     {
       id: 6,
-      title: 'Schoko moko 123 13123 123',
+      title: 'Duft 6',
       description: 'Most valuable component ever',
       price: 15.99,
       image: '../../../assets/images/rose.png'
     }
   ]
+
+  
+  wirkstoffe: IIngredient[] = [
+    {
+      id: 1,
+      title: 'wirkstoffe 1',
+      description: 'Most valuable component ever',
+      price: 15.99,
+      image: '../../../assets/images/rose.png'
+    },
+    {
+      id: 2,
+      title: 'wirkstoffe 2',
+      description: 'Most valuable component ever',
+      price: 15.99,
+      image: '../../../assets/images/rose.png'
+
+    },
+    {
+      id: 3,
+      title: 'wirkstoffe 3',
+      description: 'Most valuable component ever',
+      price: 15.99,
+      image: '../../../assets/images/rose.png'
+    },
+    {
+      id: 4,
+      title: 'wirkstoffe 4',
+      description: 'Most valuable component ever',
+      price: 15.99,
+      image: '../../../assets/images/rose.png'
+    },
+    {
+      id: 5,
+      title: 'wirkstoffe 5',
+      description: 'Most valuable component ever',
+      price: 15.99,
+      image: '../../../assets/images/rose.png'
+
+    },
+    {
+      id: 6,
+      title: 'wirkstoffe 6',
+      description: 'Most valuable component ever',
+      price: 15.99,
+      image: '../../../assets/images/rose.png'
+    }
+  ]
+
+  categories = [
+    {
+      id: 1,
+      label: "Basis",
+      description: 'Lorem ipsum dolor sit amet, mei singulis atomorum cu, ut nihil ignota pertinax cum, viris fuisset urbanitas mei ex. Has saepe utamur reprimique et. Illud viderer et cum. Eu mazim numquam voluptatibus mei. Est nonumy volutpat et, usu enim periculis no, in esse meliore suscipiantur vel.',
+      ingredients: this.basis
+    },
+    {
+      id: 2,
+      label: "Dufte",
+      description: 'Lorem ipsum dolor sit amet, mei singulis atomorum cu, ut nihil ignota pertinax cum, viris fuisset urbanitas mei ex. Has saepe utamur reprimique et. Illud viderer et cum. Eu mazim numquam voluptatibus mei. Est nonumy volutpat et, usu enim periculis no, in esse meliore suscipiantur vel.',
+      ingredients: this.dufte
+    },
+    {
+      id: 3,
+      label: "Wirkstoffe",
+      description: 'Lorem ipsum dolor sit amet, mei singulis atomorum cu, ut nihil ignota pertinax cum, viris fuisset urbanitas mei ex. Has saepe utamur reprimique et. Illud viderer et cum. Eu mazim numquam voluptatibus mei. Est nonumy volutpat et, usu enim periculis no, in esse meliore suscipiantur vel.'  ,
+      ingredients: this.wirkstoffe
+    }
+  ]
+
 
 }
